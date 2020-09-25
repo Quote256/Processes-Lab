@@ -30,7 +30,7 @@ void  main(void)
       printf("Child Pid: %d has completed!\n",status);
     }
     else{
-      printf("Woops, something went wrong!");
+      printf("There was an error.");
 
       exit(0);
     }
