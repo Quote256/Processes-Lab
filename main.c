@@ -16,9 +16,7 @@ void  main(void)
     if (pid == 0){
         int sleeper = (rand() % 10) + 1;
         int timer = (rand() % 30) + 1;
-      
-      int i;
-      for(i = 0; i < timer; i++){
+      for(int i = 0; i < timer; i++){
          printf("Child PID: %d is going to sleep!\n", getpid());
          sleep(sleeper);
          printf("Child %d: I'm awake!\n Where is my Parent %d?\n", getpid(), getppid());
