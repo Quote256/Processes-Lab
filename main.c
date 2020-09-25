@@ -14,12 +14,13 @@ void  main(void)
     pid = fork();
   
     if (pid == 0){
-      int rLoop = (rand() % 30) + 1;
-      int rSleep = (rand() % 10) + 1;
+        int sleeper = (rand() % 10) + 1;
+        int timer = (rand() % 30) + 1;
+      
       int i;
-      for(i = 0; i < rLoop; i++){
+      for(i = 0; i < timer; i++){
          printf("Child PID: %d is going to sleep!\n", getpid());
-         sleep(rSleep);
+         sleep(sleeper);
          printf("Child %d: I'm awake!\n Where is my Parent %d?\n", getpid(), getppid());
        }
       exit(0);
